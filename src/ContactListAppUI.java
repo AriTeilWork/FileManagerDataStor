@@ -48,9 +48,17 @@ public class ContactListAppUI extends JFrame {
         // Add Contact Button
         JButton addButton = new JButton("Add Contact");
         addButton.addActionListener(new ActionListener() {
+
+            private void clearFields(JTextField... fields) {
+                for (JTextField field : fields) {
+                    field.setText("");
+                }
+            }
+
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
+
                     // Get data from fields
                     String name = nameField.getText();
                     int age = Integer.parseInt(ageField.getText());
@@ -92,11 +100,12 @@ public class ContactListAppUI extends JFrame {
                     }
 
                     // Clear fields ad more oop stuff//
-                    nameField.setText("");
-                    ageField.setText("");
-                    emailField.setText("");
-                    phoneField.setText("");
-                    addressField.setText("");
+                    clearFields(nameField);
+                    clearFields(ageField);
+                    clearFields(addressField);
+                    clearFields(phoneField);
+                    clearFields(emailField);
+
 
                     JOptionPane.showMessageDialog(null, "Contact added successfully!");
                 } catch (NumberFormatException ex) {
