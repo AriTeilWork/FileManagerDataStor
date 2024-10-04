@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<listOfContacts>
+    <contactList>
+        <address>Astra 22 </address>
+        <age>22</age>
+        <mail>dd@mail.dog.com</mail>
+        <name>Bobik2</name>
+        <phone>+334432324345</phone>
+    </contactList>
+    <contactList>
+        <address>Docs st 45 b1 45100</address>
+        <age>22</age>
+        <mail>test@mail.com</mail>
+        <name>testNane</name>
+        <phone>0963042887</phone>
+    </contactList>
+    <contactList>
+        <address>test test</address>
+        <age>3</age>
+        <mail>dodik@mail.test</mail>
+        <name>dodik</name>
+        <phone>0894563276</phone>
+    </contactList>
+    <contactList>
+        <address>Magik Lands</address>
+        <age>200</age>
+        <mail>oldWizard.magik@simpl.mail.com</mail>
+        <name>Gnom Gnomuch</name>
+        <phone>0666999666</phone>
+    </contactList>
+    <contactList>
+        <address>dfjkdsj</address>
+        <age>33</age>
+        <mail>aaadadadada@test.com</mail>
+        <name>ss</name>
+        <phone>3333333333</phone>
+    </contactList>
+    <contactList>
+        <address>tetetetet</address>
+        <age>455</age>
+        <mail>yyyy@mail.com</mail>
+        <name>dd</name>
+        <phone>5556667778</phone>
+    </contactList>
+    <contactList>
+        <address>cccc</address>
+        <age>66</age>
+        <mail>dddddddffgedghh@mail.com</mail>
+        <name>gg</name>
+        <phone>0963332288</phone>
+    </contactList>
+</listOfContacts>
