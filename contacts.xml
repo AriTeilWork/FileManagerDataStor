@@ -49,4 +49,11 @@
         <name>gg</name>
         <phone>0963332288</phone>
     </contactList>
+    <contactList>
+        <address>virbebe 123</address>
+        <age>21</age>
+        <mail>huisosi@gmail.com</mail>
+        <name>artem</name>
+        <phone>1234567799</phone>
+    </contactList>
 </listOfContacts>

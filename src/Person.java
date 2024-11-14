@@ -9,9 +9,10 @@ public class Person {
     private String phone;
     private String address;
 
-    // Empty constructor needed for JAXB
+    // Default constructor (required for JAXB and JSON)
     public Person() {}
 
+    // Parameterized constructor for easy instantiation
     public Person(int age, String name, String mail, String phone, String address) {
         setAge(age);
         setName(name);
@@ -62,7 +63,8 @@ public class Person {
     }
 
     public void setPhone(String phone) {
-        if (!phone.matches("\\d{10}|(?:\\d{3}-){2}\\d{4}")) { // Simple regex for 10 digits or 'XXX-XXX-XXXX' format
+        // A basic check for 10-digit format or XXX-XXX-XXXX format
+        if (!phone.matches("\\d{10}|(?:\\d{3}-){2}\\d{4}")) {
             throw new IllegalArgumentException("Invalid phone number format.");
         }
         this.phone = phone;
@@ -84,5 +86,4 @@ public class Person {
     public String toString() {
         return "Person [name=" + name + ", age=" + age + ", mail=" + mail + ", phone=" + phone + ", address=" + address + "]";
     }
-
 }
