@@ -13,11 +13,11 @@ public class Person {
     public Person() {}
 
     public Person(int age, String name, String mail, String phone, String address) {
-        this.age = age;
-        this.name = name;
-        this.mail = mail;
-        this.phone = phone;
-        this.address = address;
+        setAge(age);
+        setName(name);
+        setMail(mail);
+        setPhone(phone);
+        setAddress(address);
     }
 
     @XmlElement
@@ -26,6 +26,9 @@ public class Person {
     }
 
     public void setAge(int age) {
+        if (age < 0) {
+            throw new IllegalArgumentException("Age cannot be negative.");
+        }
         this.age = age;
     }
 
@@ -35,6 +38,9 @@ public class Person {
     }
 
     public void setName(String name) {
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null or empty.");
+        }
         this.name = name;
     }
 
@@ -44,6 +50,9 @@ public class Person {
     }
 
     public void setMail(String mail) {
+        if (!mail.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+            throw new IllegalArgumentException("Invalid email format.");
+        }
         this.mail = mail;
     }
 
@@ -53,6 +62,9 @@ public class Person {
     }
 
     public void setPhone(String phone) {
+        if (!phone.matches("\\d{10}|(?:\\d{3}-){2}\\d{4}")) { // Simple regex for 10 digits or 'XXX-XXX-XXXX' format
+            throw new IllegalArgumentException("Invalid phone number format.");
+        }
         this.phone = phone;
     }
 
@@ -62,6 +74,9 @@ public class Person {
     }
 
     public void setAddress(String address) {
+        if (address == null || address.trim().isEmpty()) {
+            throw new IllegalArgumentException("Address cannot be null or empty.");
+        }
         this.address = address;
     }
 
@@ -69,4 +84,5 @@ public class Person {
     public String toString() {
         return "Person [name=" + name + ", age=" + age + ", mail=" + mail + ", phone=" + phone + ", address=" + address + "]";
     }
+
 }
